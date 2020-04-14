@@ -1,0 +1,26 @@
+@import "./variables.scss";
+
+.user-info {
+    color: $color-primary;
+    font-weight: bold;
+    size: 3em
+}
+
+.user-info-secondary {
+    color: $color-secondary;
+    size: 2em  
+}
+
+.users-container {
+    grid-column: 2 / 2;
+    margin-top: $margin-medium;
+}
+
+.users-header {
+    text-align: center;
+    margin: $margin-medium;
+}
+
+.users {
+    text-align: start;
+}
