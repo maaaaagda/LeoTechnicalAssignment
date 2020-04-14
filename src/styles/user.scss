@@ -25,3 +25,15 @@
 .users {
     text-align: start;
 }
+
+.users-search {
+    height: $input-size-medium;
+    padding: $padding-small;
+    font-size: large;
+   
+    border: solid black;
+    width: 100%;
+    &::placeholder {
+        color: $color-secondary;
+    }
+}
