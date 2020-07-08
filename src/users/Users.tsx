@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import UserRow from './UserRow';
-import IUser from './User'
-import { getUsers } from '../../api/users';
+import IUser from './types/IUser'
+import { getUsers } from '../api/users';
 import UsersSearch from './SearchUsers';
 
 const Users: React.FC = () => {

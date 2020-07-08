@@ -1,4 +1,4 @@
-import IUser from "../app/users/User";
+import IUser from "../users/types/IUser";
 import axios from "axios";
 import { resolveAxiosResponse } from "./common";
 

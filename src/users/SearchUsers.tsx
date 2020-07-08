@@ -1,10 +1,10 @@
 import React, { ChangeEvent } from 'react'
 
-interface ISearchProps {
+type SearchProps = {
     onSearch: (searchText: string) => void;
 }
 
-const UsersSearch: React.FC<ISearchProps> = ({ onSearch }) => {
+const UsersSearch: React.FC<SearchProps> = ({ onSearch }) => {
 
     const onChange: (event: ChangeEvent<HTMLInputElement>) => void = (event) => {
         onSearch(event.target.value)
