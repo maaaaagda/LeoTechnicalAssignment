@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { IUsersState, IGetUsersAction } from "./store/types"
 import { fetchUsers } from './store/actions';
 import { ThunkDispatch } from 'redux-thunk';
+import { UsersContainer, UsersHeader, UsersList } from './styled';
 
 const Users: React.FC<{ users: IUser[], loadingUsersError: string, loadingUsers: boolean, dispatch: ThunkDispatch<{}, {}, IGetUsersAction> }> 
   = ({ users, loadingUsers, loadingUsersError, dispatch }) => {
@@ -19,18 +20,18 @@ const Users: React.FC<{ users: IUser[], loadingUsersError: string, loadingUsers:
     return users.filter(user => !searchPhrase || user.name.toLowerCase().includes(searchPhrase.toLowerCase()))
   }, [users, searchPhrase])
 
-  return <div className="users-container">
-      <h1 className="users-header">Users list</h1>
+  return <UsersContainer>
+      <UsersHeader>Users list</UsersHeader>
       {loadingUsers ? <p>Loading...</p> : 
       <>
         <UsersSearch onSearch={text => setSearchPhrase(text)}/>
-        <div className="users">
+        <UsersList>
           {filteredUsers.map((user: IUser) => <UserRow key={user.id} id={user.id} name={user.name} username={user.username}/>)}
-        </div>
+        </UsersList>
       </>
     }
     {loadingUsersError && <p className="error">{loadingUsersError}</p>}
-  </div>
+  </UsersContainer>
 }
 
 const mapStateToProps = (state: IUsersState) => ({

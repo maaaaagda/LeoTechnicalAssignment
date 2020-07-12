@@ -1,4 +1,5 @@
 import React from "react";
+import { UserInfoSecondary, UserInfo } from "./styled";
 
 type UserRowProps = {
     id: number,
@@ -7,9 +8,9 @@ type UserRowProps = {
 }
 
 const UserRow: React.FC<UserRowProps> = ({id, name, username}) => {
-    return <p className="user-info-secondary">
-        <span>{id}. </span><span className="user-info">{name} </span><span>@{username}</span>
-    </p>
+    return <UserInfoSecondary>
+        <span>{id}. </span><UserInfo>{name} </UserInfo><span>@{username}</span>
+    </UserInfoSecondary>
 }
 
 export default UserRow;
