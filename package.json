@@ -23,6 +23,7 @@
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
+    "styled-components": "^5.1.1",
     "typescript": "^3.8.3"
   },
   "scripts": {
@@ -48,6 +49,7 @@
   },
   "devDependencies": {
     "@types/redux-devtools-extension": "^2.13.2",
+    "@types/styled-components": "^5.1.1",
     "redux-devtools-extension": "^2.13.8"
   }
 }
