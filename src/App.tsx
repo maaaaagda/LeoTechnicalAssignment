@@ -1,16 +1,17 @@
 import React from 'react';
-import './styles/app.scss';
+import './styles/app.ts';
 import Users from './users/Users';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme } from './styles/theme';
+import { fancyTheme } from './styles/theme';
+import { AppContainer } from './styles/app';
 
 function App() {
   return (
-    <div className="app">
-        <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={fancyTheme}>
+      <AppContainer>
           <Users/>
-        </ThemeProvider>
-    </div>
+      </AppContainer>
+    </ThemeProvider>
   );
 }
 

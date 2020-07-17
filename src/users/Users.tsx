@@ -7,6 +7,7 @@ import { IUsersState, IGetUsersAction } from "./store/types"
 import { fetchUsers } from './store/actions';
 import { ThunkDispatch } from 'redux-thunk';
 import { UsersContainer, UsersHeader, UsersList } from './styled';
+import { ErrorText } from '../common/styled'
 
 const Users: React.FC<{ users: IUser[], loadingUsersError: string, loadingUsers: boolean, dispatch: ThunkDispatch<{}, {}, IGetUsersAction> }> 
   = ({ users, loadingUsers, loadingUsersError, dispatch }) => {
@@ -30,7 +31,7 @@ const Users: React.FC<{ users: IUser[], loadingUsersError: string, loadingUsers:
         </UsersList>
       </>
     }
-    {loadingUsersError && <p className="error">{loadingUsersError}</p>}
+    {loadingUsersError && <ErrorText>{loadingUsersError}</ErrorText>}
   </UsersContainer>
 }
 

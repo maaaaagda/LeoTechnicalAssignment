@@ -8,12 +8,13 @@ export const UserInfo = styled.span`
 
 export const UserInfoSecondary = styled.p`
     color: ${props => (props.theme.color.secondary)};
-    size: 2em  
+    size: 2em  ;
 `;
 
 export const UsersContainer = styled.div`
     grid-column: 2 / 2;
     margin-top: ${props => (props.theme.margin.medium)};
+    color: ${props => (props.theme.color.primary)};
 `;
 
 export const UsersHeader = styled.h1`
